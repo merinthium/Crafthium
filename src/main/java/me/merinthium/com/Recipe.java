@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Recipe extends JavaPlugin {
 	
-	
+
 	@SuppressWarnings("deprecation")
 	public void onEnable(){
 		//Crafting & Smelting
@@ -260,6 +260,10 @@ public class Recipe extends JavaPlugin {
 		FurnaceRecipe AtS = new FurnaceRecipe(new ItemStack(Material.STONE),Material.STONE,5);
 		AtS.setInput(Material.STONE,5);
 		
+			//Dragon egg
+//		ShapedRecipe DE = new ShapedRecipe(new ItemStack(Material.DRAGON_EGG));
+//		DE.shape(" O ","OEO","OOO").setIngredient('O', Material.OBSIDIAN).setIngredient('E', Material.EGG);
+		
 		getServer().addRecipe(saddle);
 		getServer().addRecipe(IHA);
 		getServer().addRecipe(GHA);
@@ -326,6 +330,7 @@ public class Recipe extends JavaPlugin {
 		getServer().addRecipe(PDtD);
 		getServer().addRecipe(PAtA);
 		getServer().addRecipe(SBtSL);
+//		getServer().addRecipe(DE);
 		
 		getLogger().info("Crafthium has been Enabled");
 	}
