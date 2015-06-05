@@ -197,10 +197,6 @@ public class Recipe extends JavaPlugin {
 		ShapelessRecipe SBtSB = new ShapelessRecipe(new ItemStack(Material.SNOW_BALL, 4));
 		SBtSB.addIngredient(Material.SNOW_BLOCK);
 		
-			//Snow balls to snow slab
-		ShapedRecipe SBtSL = new ShapedRecipe(new ItemStack(Material.SNOW));
-		SBtSL.shape("  ","  ","SSS").setIngredient('S', Material.SNOW_BALL);
-		
 		//Sapling to stick
 		
 			//Oak sapling
@@ -367,7 +363,6 @@ public class Recipe extends JavaPlugin {
 		getServer().addRecipe(PGtG);
 		getServer().addRecipe(PDtD);
 		getServer().addRecipe(PAtA);
-		getServer().addRecipe(SBtSL);
 //		getServer().addRecipe(DE);
 		getServer().addRecipe(Mycel);
 		getServer().addRecipe(SoulS);
