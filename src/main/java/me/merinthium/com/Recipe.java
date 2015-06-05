@@ -226,6 +226,31 @@ public class Recipe extends JavaPlugin {
 		ShapelessRecipe DStS = new ShapelessRecipe(new ItemStack(Material.STICK, 2));
 		DStS.addIngredient(Material.SAPLING,5);
 		
+		//podzol
+			//oak leaves + dirt
+		ShapedRecipe PodO = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		PodO.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES);
+		
+			//spruce+dirt
+		ShapedRecipe PodS = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		PodS.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,1);
+		
+			//Birch+dirt
+		ShapedRecipe PodB = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		PodB.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,2);
+		
+			//jungle+dirt
+		ShapedRecipe PodJ = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		PodJ.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,3);
+		
+			//acaica+dirt
+		ShapedRecipe PodA = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		PodA.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2);
+		
+			//Dark+Dirt
+		ShapedRecipe PodDa = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		PodDa.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2,1);
+		
 			//Polished to normal
 			//Polished Granite
 		ShapelessRecipe PGtG = new ShapelessRecipe(new ItemStack(Material.STONE, 1,(short)1));
@@ -239,6 +264,17 @@ public class Recipe extends JavaPlugin {
 		ShapelessRecipe PAtA = new ShapelessRecipe(new ItemStack(Material.STONE, 1,(short)5));
 		PAtA.addIngredient(Material.STONE,6);
 		
+			//Soul sand
+		ShapedRecipe SoulS = new ShapedRecipe(new ItemStack(Material.SOUL_SAND,4));
+		SoulS.shape("SSS","SNS","SSS").setIngredient('S', Material.SAND).setIngredient('N', Material.NETHER_WARTS);
+		
+			//Mycel
+		ShapelessRecipe Mycel = new ShapelessRecipe(new ItemStack(Material.MYCEL));
+		Mycel.addIngredient(Material.BROWN_MUSHROOM).addIngredient(Material.RED_MUSHROOM).addIngredient(Material.GRASS);
+		
+			//sticks to planks
+		ShapedRecipe StP = new ShapedRecipe(new ItemStack(Material.WOOD));
+		StP.shape("  "," SS"," SS").setIngredient('S', Material.STICK);
 		
 		//Furnace Recipes 
 		
@@ -259,6 +295,8 @@ public class Recipe extends JavaPlugin {
 			//Andersite to stone
 		FurnaceRecipe AtS = new FurnaceRecipe(new ItemStack(Material.STONE),Material.STONE,5);
 		AtS.setInput(Material.STONE,5);
+		
+			
 		
 			//Dragon egg
 //		ShapedRecipe DE = new ShapedRecipe(new ItemStack(Material.DRAGON_EGG));
@@ -331,6 +369,15 @@ public class Recipe extends JavaPlugin {
 		getServer().addRecipe(PAtA);
 		getServer().addRecipe(SBtSL);
 //		getServer().addRecipe(DE);
+		getServer().addRecipe(Mycel);
+		getServer().addRecipe(SoulS);
+		getServer().addRecipe(PodO);
+		getServer().addRecipe(PodS);
+		getServer().addRecipe(PodB);
+		getServer().addRecipe(PodJ);
+		getServer().addRecipe(PodA);
+		getServer().addRecipe(PodDa);
+		getServer().addRecipe(StP);
 		
 		getLogger().info("Crafthium has been Enabled");
 	}
