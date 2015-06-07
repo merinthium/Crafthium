@@ -224,27 +224,27 @@ public class Recipe extends JavaPlugin {
 		
 		//podzol
 			//oak leaves + dirt
-		ShapedRecipe PodO = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		ShapedRecipe PodO = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)2));
 		PodO.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES).setIngredient('D', Material.DIRT);
 		
 			//spruce+dirt
-		ShapedRecipe PodS = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		ShapedRecipe PodS = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)2));
 		PodS.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,1).setIngredient('D', Material.DIRT);
 		
 			//Birch+dirt
-		ShapedRecipe PodB = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		ShapedRecipe PodB = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)2));
 		PodB.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,2).setIngredient('D', Material.DIRT);
 		
 			//jungle+dirt
-		ShapedRecipe PodJ = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		ShapedRecipe PodJ = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)2));
 		PodJ.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,3).setIngredient('D', Material.DIRT);
 		
 			//acaica+dirt
-		ShapedRecipe PodA = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		ShapedRecipe PodA = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)2));
 		PodA.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2).setIngredient('D', Material.DIRT);
 		
 			//Dark+Dirt
-		ShapedRecipe PodDa = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
+		ShapedRecipe PodDa = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)2));
 		PodDa.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2,1).setIngredient('D', Material.DIRT);
 		
 			//Polished to normal
@@ -262,7 +262,7 @@ public class Recipe extends JavaPlugin {
 		
 			//Soul sand
 		ShapedRecipe SoulS = new ShapedRecipe(new ItemStack(Material.SOUL_SAND,4));
-		SoulS.shape("SSS","SNS","SSS").setIngredient('S', Material.SAND).setIngredient('N', Material.NETHER_WARTS);
+		SoulS.shape("SSS","SNS","SSS").setIngredient('S', Material.SAND).setIngredient('N', Material.NETHER_STALK);
 		
 			//Mycel
 		ShapelessRecipe Mycel = new ShapelessRecipe(new ItemStack(Material.MYCEL));
@@ -288,7 +288,18 @@ public class Recipe extends JavaPlugin {
 		FurnaceRecipe AtS = new FurnaceRecipe(new ItemStack(Material.STONE),Material.STONE,5);
 		AtS.setInput(Material.STONE,5);
 		
-			
+		//skulls and heads
+			//Skely skull
+		ShapedRecipe SKs = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM));
+		SKs.shape("BBB","BBB","BBB").setIngredient('B', Material.BONE);
+		
+			//Zombie skull
+		ShapedRecipe ZSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short)2));
+		ZSk.shape(" Z ","ZSZ"," Z ").setIngredient('S', Material.SKULL_ITEM).setIngredient('Z',Material.ROTTEN_FLESH);
+		
+			//Creeper skull
+		ShapedRecipe CSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short) 4));
+		CSk.shape(" C ","CSC"," C ").setIngredient('S', Material.SKULL_ITEM).setIngredient('C',Material.SULPHUR);
 		
 			//Dragon egg
 //		ShapedRecipe DE = new ShapedRecipe(new ItemStack(Material.DRAGON_EGG));
@@ -368,6 +379,9 @@ public class Recipe extends JavaPlugin {
 		getServer().addRecipe(PodJ);
 		getServer().addRecipe(PodA);
 		getServer().addRecipe(PodDa);
+		getServer().addRecipe(SKs);
+		getServer().addRecipe(ZSk);
+		getServer().addRecipe(CSk);
 		
 		getLogger().info("Crafthium has been Enabled");
 	}
