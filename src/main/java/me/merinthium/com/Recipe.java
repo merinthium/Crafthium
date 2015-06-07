@@ -225,27 +225,27 @@ public class Recipe extends JavaPlugin {
 		//podzol
 			//oak leaves + dirt
 		ShapedRecipe PodO = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
-		PodO.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES);
+		PodO.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES).setIngredient('D', Material.DIRT);
 		
 			//spruce+dirt
 		ShapedRecipe PodS = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
-		PodS.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,1);
+		PodS.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,1).setIngredient('D', Material.DIRT);
 		
 			//Birch+dirt
 		ShapedRecipe PodB = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
-		PodB.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,2);
+		PodB.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,2).setIngredient('D', Material.DIRT);
 		
 			//jungle+dirt
 		ShapedRecipe PodJ = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
-		PodJ.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,3);
+		PodJ.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES,3).setIngredient('D', Material.DIRT);
 		
 			//acaica+dirt
 		ShapedRecipe PodA = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
-		PodA.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2);
+		PodA.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2).setIngredient('D', Material.DIRT);
 		
 			//Dark+Dirt
 		ShapedRecipe PodDa = new ShapedRecipe(new ItemStack(Material.DIRT,1,(short)3));
-		PodDa.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2,1);
+		PodDa.shape("LLL","LDL","LLL").setIngredient('L', Material.LEAVES_2,1).setIngredient('D', Material.DIRT);
 		
 			//Polished to normal
 			//Polished Granite
@@ -267,10 +267,6 @@ public class Recipe extends JavaPlugin {
 			//Mycel
 		ShapelessRecipe Mycel = new ShapelessRecipe(new ItemStack(Material.MYCEL));
 		Mycel.addIngredient(Material.BROWN_MUSHROOM).addIngredient(Material.RED_MUSHROOM).addIngredient(Material.GRASS);
-		
-			//sticks to planks
-		ShapedRecipe StP = new ShapedRecipe(new ItemStack(Material.WOOD));
-		StP.shape("  "," SS"," SS").setIngredient('S', Material.STICK);
 		
 		//Furnace Recipes 
 		
@@ -372,7 +368,6 @@ public class Recipe extends JavaPlugin {
 		getServer().addRecipe(PodJ);
 		getServer().addRecipe(PodA);
 		getServer().addRecipe(PodDa);
-		getServer().addRecipe(StP);
 		
 		getLogger().info("Crafthium has been Enabled");
 	}
