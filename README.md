@@ -4,7 +4,9 @@ This plugin is a basic crafting plugin that is optimised for Minecraft Survival 
 This read me filewill also be the change log for the plugin (Starting from 07/06/2015)
 
 <b>Changelog 8/6/15</b>
+
 ++Added Sticks to planks recipe
+
 ++Added Slabs (All) to Full block
 	-- Stone slabs
 	-- Wood slabs
