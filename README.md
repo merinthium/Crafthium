@@ -8,7 +8,9 @@ This read me filewill also be the change log for the plugin (Starting from 07/06
 ++Added Sticks to planks recipe
 
 ++Added Slabs (All) to Full block
+
 	-- Stone slabs
+	
 	-- Wood slabs
 
 <b>Changelog 7/6/15</b>
