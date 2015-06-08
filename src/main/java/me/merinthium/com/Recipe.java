@@ -268,6 +268,127 @@ public class Recipe extends JavaPlugin {
 		ShapelessRecipe Mycel = new ShapelessRecipe(new ItemStack(Material.MYCEL));
 		Mycel.addIngredient(Material.BROWN_MUSHROOM).addIngredient(Material.RED_MUSHROOM).addIngredient(Material.GRASS);
 		
+		//Sticks to planks
+			//Bottom Right Grid
+		ShapedRecipe StickstPlanksBR = new ShapedRecipe(new ItemStack(Material.WOOD,4));
+		StickstPlanksBR.shape("   "," SS"," SS").setIngredient('S', Material.STICK);
+			//Bottom Left Grid
+		ShapedRecipe StickstPlanksBL = new ShapedRecipe(new ItemStack(Material.WOOD,4));
+		StickstPlanksBL.shape("   ","SS ","SS ").setIngredient('S', Material.STICK);
+		
+			//Top Right Grid
+		ShapedRecipe StickstPlanksTR = new ShapedRecipe(new ItemStack(Material.WOOD,4));
+		StickstPlanksTR.shape(" SS"," SS","   ").setIngredient('S', Material.STICK);
+			//Top Left Grid
+		ShapedRecipe StickstPlanksTL = new ShapedRecipe(new ItemStack(Material.WOOD,4));
+		StickstPlanksTL.shape("SS ","SS ","   ").setIngredient('S', Material.STICK);
+		
+		//Slabs to blocks			
+			//Wood
+				//Oak slabs to Planks (Bottom) 
+		ShapedRecipe OStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3));
+		OStPb.shape("   ","SSS","SSS").setIngredient('S', Material.WOOD_STEP);
+				//Oak slabs to Planks (Top)
+		ShapedRecipe OStPt = new ShapedRecipe(new ItemStack(Material.WOOD,3));
+		OStPt.shape("SSS","SSS","   ").setIngredient('S', Material.WOOD_STEP);
+				//Spruce slabs to planks(Bottom)
+		ShapedRecipe SStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)1));
+		SStPb.shape("   ","SSS","SSS").setIngredient('S',Material.WOOD_STEP,1);
+				//Spruce slabs to planks (top)
+		ShapedRecipe SStPt = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)1));
+		SStPt.shape("SSS","SSS","   ").setIngredient('S',Material.WOOD_STEP,1);
+				//Birch Slabs to Planks (bottom)
+		ShapedRecipe BStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)2));
+		BStPb.shape("   ","SSS","SSS").setIngredient('S',Material.WOOD_STEP,2);
+				//Birch Slabs to Planks (Top)
+		ShapedRecipe BStPt = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)2));
+		BStPt.shape("SSS","SSS","   ").setIngredient('S',Material.WOOD_STEP,2);
+				//Jungle slabs to planks (Bottom)
+		ShapedRecipe JStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)3));
+		JStPb.shape("   ","SSS","SSS").setIngredient('S', Material.WOOD_STEP,3);
+				//Jungle slabs to planks (Top)
+		ShapedRecipe JStPt = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)3));
+		JStPt.shape("SSS","SSS","   ").setIngredient('S', Material.WOOD_STEP,3);
+				//Acacia Slabs to planks (Bottom)
+		ShapedRecipe AStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)4));
+		AStPb.shape("   ","SSS","SSS").setIngredient('S', Material.WOOD_STEP,4);
+				//Acacia slabs to planks (Top)
+		ShapedRecipe AStPt = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)4));
+		AStPt.shape("SSS","SSS","   ").setIngredient('S', Material.WOOD_STEP,4);
+				//Dark Slabs to planks (Bottom)
+		ShapedRecipe DStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)5));
+		DStPb.shape("   ","SSS","SSS").setIngredient('S', Material.WOOD_STEP,5);
+				//Dark Slabs to planks (top)
+		ShapedRecipe DStPt = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)5));
+		DStPt.shape("SSS","SSS","   ").setIngredient('S', Material.WOOD_STEP,5);
+			//stone & brick
+				//stone slab to block (Bottom)
+		ShapedRecipe SStBb = new ShapedRecipe(new ItemStack(Material.STONE,3));
+		SStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STEP);
+				//stone slab to block (Top)
+		ShapedRecipe SStBt = new ShapedRecipe(new ItemStack(Material.STONE,3));
+		SStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STEP);
+			//SandStone Slab to block (Bottom)
+		ShapedRecipe SSStBb = new ShapedRecipe(new ItemStack(Material.SANDSTONE,3));
+		SSStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STEP,1);
+			//SandStone Slab to Block (Top)
+		ShapedRecipe SSStBt = new ShapedRecipe(new ItemStack(Material.SANDSTONE,3));
+		SSStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STEP,1);
+			//Cobble slab to block (Bottom)
+		ShapedRecipe CStBb = new ShapedRecipe(new ItemStack(Material.COBBLESTONE,3));
+		CStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STEP,3);
+			//Cobble Slab to Block (Top)
+		ShapedRecipe CStBt = new ShapedRecipe(new ItemStack(Material.COBBLESTONE,3));
+		CStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STEP,3);
+			//Brick slab to block (Bottom)
+		ShapedRecipe BStBb = new ShapedRecipe(new ItemStack(Material.BRICK,3));
+		BStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STEP,4);
+			//Brick slab to block (Top)
+		ShapedRecipe BStBt = new ShapedRecipe(new ItemStack(Material.BRICK,3));
+		BStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STEP,4);
+			//Stone brick slab to block (Bottom)
+		ShapedRecipe SBStBb = new ShapedRecipe(new ItemStack(Material.SMOOTH_BRICK,3));
+		SBStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STEP,5);
+			//Stone brick slab to block (Top)
+		ShapedRecipe SBStBt = new ShapedRecipe(new ItemStack(Material.SMOOTH_BRICK,3));
+		SBStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STEP,5);
+			//Nether Slab to block (Bottom)
+		ShapedRecipe NStBb = new ShapedRecipe(new ItemStack(Material.NETHER_BRICK,3));
+		NStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STEP,6);
+			//Nether SLab to Block (Top)
+		ShapedRecipe NStBt = new ShapedRecipe(new ItemStack(Material.NETHER_BRICK,3));
+		NStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STEP,6);
+			//Quartz to block (Bottom)
+		ShapedRecipe QStBb = new ShapedRecipe(new ItemStack(Material.QUARTZ_BLOCK,3));
+		QStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STEP,7);
+			//Quartz to block (Top)
+		ShapedRecipe QStBt = new ShapedRecipe(new ItemStack(Material.QUARTZ_BLOCK,3));
+		QStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STEP,7);
+			//Red Sandstone to block (Bottom)
+		ShapedRecipe RSStBb = new ShapedRecipe(new ItemStack(Material.RED_SANDSTONE,3));
+		RSStBb.shape("   ","SSS","SSS").setIngredient('S', Material.STONE_SLAB2);
+			//Red sandstone to block (Top)
+		ShapedRecipe RSStBt = new ShapedRecipe(new ItemStack(Material.RED_SANDSTONE,3));
+		RSStBt.shape("SSS","SSS","   ").setIngredient('S', Material.STONE_SLAB2);
+		
+		//skulls and heads
+		//Skely skull
+	ShapedRecipe SKs = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM));
+	SKs.shape("BBB","BBB","BBB").setIngredient('B', Material.BONE);
+	
+		//Zombie skull
+	ShapedRecipe ZSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short)2));
+	ZSk.shape(" Z ","ZSZ"," Z ").setIngredient('S', Material.SKULL_ITEM).setIngredient('Z',Material.ROTTEN_FLESH);
+	
+		//Creeper skull
+	ShapedRecipe CSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short) 4));
+	CSk.shape(" C ","CSC"," C ").setIngredient('S', Material.SKULL_ITEM).setIngredient('C',Material.SULPHUR);
+	
+		//Dragon egg
+//	ShapedRecipe DE = new ShapedRecipe(new ItemStack(Material.DRAGON_EGG));
+//	DE.shape(" O ","OEO","OOO").setIngredient('O', Material.OBSIDIAN).setIngredient('E', Material.EGG);
+	
+		
 		//Furnace Recipes 
 		
 			//Bucket to iron
@@ -287,23 +408,6 @@ public class Recipe extends JavaPlugin {
 			//Andersite to stone
 		FurnaceRecipe AtS = new FurnaceRecipe(new ItemStack(Material.STONE),Material.STONE,5);
 		AtS.setInput(Material.STONE,5);
-		
-		//skulls and heads
-			//Skely skull
-		ShapedRecipe SKs = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM));
-		SKs.shape("BBB","BBB","BBB").setIngredient('B', Material.BONE);
-		
-			//Zombie skull
-		ShapedRecipe ZSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short)2));
-		ZSk.shape(" Z ","ZSZ"," Z ").setIngredient('S', Material.SKULL_ITEM).setIngredient('Z',Material.ROTTEN_FLESH);
-		
-			//Creeper skull
-		ShapedRecipe CSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short) 4));
-		CSk.shape(" C ","CSC"," C ").setIngredient('S', Material.SKULL_ITEM).setIngredient('C',Material.SULPHUR);
-		
-			//Dragon egg
-//		ShapedRecipe DE = new ShapedRecipe(new ItemStack(Material.DRAGON_EGG));
-//		DE.shape(" O ","OEO","OOO").setIngredient('O', Material.OBSIDIAN).setIngredient('E', Material.EGG);
 		
 		getServer().addRecipe(saddle);
 		getServer().addRecipe(IHA);
@@ -382,6 +486,38 @@ public class Recipe extends JavaPlugin {
 		getServer().addRecipe(SKs);
 		getServer().addRecipe(ZSk);
 		getServer().addRecipe(CSk);
+		getServer().addRecipe(StickstPlanksBR);
+		getServer().addRecipe(StickstPlanksBL);
+		getServer().addRecipe(StickstPlanksTR);
+		getServer().addRecipe(StickstPlanksTL);
+		getServer().addRecipe(OStPb);
+		getServer().addRecipe(OStPt);
+		getServer().addRecipe(SStPb);
+		getServer().addRecipe(SStPt);
+		getServer().addRecipe(BStPb);
+		getServer().addRecipe(BStPt);
+		getServer().addRecipe(JStPb);
+		getServer().addRecipe(JStPt);
+		getServer().addRecipe(AStPb);
+		getServer().addRecipe(AStPt);
+		getServer().addRecipe(DStPb);
+		getServer().addRecipe(DStPt);
+		getServer().addRecipe(SStBb);
+		getServer().addRecipe(SStBt);
+		getServer().addRecipe(SSStBb);
+		getServer().addRecipe(SSStBt);
+		getServer().addRecipe(CStBb);
+		getServer().addRecipe(CStBt);
+		getServer().addRecipe(BStBb);
+		getServer().addRecipe(BStBt);
+		getServer().addRecipe(SBStBb);
+		getServer().addRecipe(SBStBt);
+		getServer().addRecipe(NStBb);
+		getServer().addRecipe(NStBt);
+		getServer().addRecipe(QStBb);
+		getServer().addRecipe(QStBt);
+		getServer().addRecipe(RSStBb);
+		getServer().addRecipe(RSStBt);
 		
 		getLogger().info("Crafthium has been Enabled");
 	}
