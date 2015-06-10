@@ -1,19 +1,34 @@
 package me.merinthium.com;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Recipe extends JavaPlugin {
+public class Recipe extends JavaPlugin implements Listener {
 	
+@SuppressWarnings("unused")
+private static Plugin plugin;
+ 
 
 	@SuppressWarnings("deprecation")
 	public void onEnable(){
-		//Crafting & Smelting
+		 getServer().getPluginManager().registerEvents(this, this); 
+			
+		 //Crafting & Smelting
 			//saddle
 		ShapedRecipe saddle = new ShapedRecipe(new ItemStack(Material.SADDLE));
 		saddle.shape("L L","LLL","LIL").setIngredient('L', Material.LEATHER).setIngredient('I', Material.IRON_INGOT);
@@ -375,19 +390,19 @@ public class Recipe extends JavaPlugin {
 		//Skely skull
 	ShapedRecipe SKs = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM));
 	SKs.shape("BBB","BBB","BBB").setIngredient('B', Material.BONE);
-	
+
 		//Zombie skull
 	ShapedRecipe ZSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short)2));
 	ZSk.shape(" Z ","ZSZ"," Z ").setIngredient('S', Material.SKULL_ITEM).setIngredient('Z',Material.ROTTEN_FLESH);
-	
+
 		//Creeper skull
 	ShapedRecipe CSk = new ShapedRecipe(new ItemStack(Material.SKULL_ITEM, 1, (short) 4));
 	CSk.shape(" C ","CSC"," C ").setIngredient('S', Material.SKULL_ITEM).setIngredient('C',Material.SULPHUR);
-	
+
 		//Dragon egg
-//	ShapedRecipe DE = new ShapedRecipe(new ItemStack(Material.DRAGON_EGG));
-//	DE.shape(" O ","OEO","OOO").setIngredient('O', Material.OBSIDIAN).setIngredient('E', Material.EGG);
-	
+	//ShapedRecipe DE = new ShapedRecipe(new ItemStack(Material.DRAGON_EGG));
+	//DE.shape(" O ","OEO","OOO").setIngredient('O', Material.OBSIDIAN).setIngredient('E', Material.EGG);
+
 		
 		//Furnace Recipes 
 		
@@ -517,14 +532,35 @@ public class Recipe extends JavaPlugin {
 		getServer().addRecipe(QStBb);
 		getServer().addRecipe(QStBt);
 		getServer().addRecipe(RSStBb);
-		getServer().addRecipe(RSStBt);
+		getServer().addRecipe(RSStBt);	
 		
 		getLogger().info("Crafthium has been Enabled");
 	}
 	
+ @EventHandler //Items with command actions
+	public void onPlayerRightClick(PlayerInteractEvent event) {
+	    	  Player player = event.getPlayer(); 
+	    	  
+	    ItemStack CraftBook = new ItemStack(Material.ENCHANTED_BOOK); 
+	    ItemMeta im = CraftBook.getItemMeta(); 
+	    im.setDisplayName (ChatColor.RED + "" + ChatColor.BOLD + "Crafting Book"); 
+	    List<String> lore = new ArrayList<String>(); 
+	    lore.add(ChatColor.DARK_PURPLE + "A book embued with ender crafting magic");
+	    lore.add(ChatColor.AQUA + "Right click to use");
+	    im.setLore(lore); 
+	    CraftBook.setItemMeta(im); 
+	    ShapedRecipe disk = new ShapedRecipe(CraftBook); 
+	    disk.shape("EBE","ECE","EEE").setIngredient('E', Material.EYE_OF_ENDER).setIngredient('C', Material.WORKBENCH).setIngredient('B', Material.BOOK);
+	    Bukkit.getServer().addRecipe(disk);   
+	    	if (player.getItemInHand().equals(CraftBook)){
+	    			player.openWorkbench(null, true);
+	 }
+}
+	 
 	public void onDisable(){
 		Bukkit.getServer().clearRecipes();
 		getLogger().info("Crafthium has been Disabled");
+		plugin = null;
 	}
 
 }

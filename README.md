@@ -1,7 +1,10 @@
 # Crafthium
 Plugin
 This plugin is a basic crafting plugin that is optimised for Minecraft Survival servers. It is designed to improve upon the original crafting recipes along with adding craftability to items that are not normally craftable (Without becoming overpowered and game breaking). 
-This read me filewill also be the change log for the plugin (Starting from 07/06/2015)
+This read me file will also be the change log for the plugin (Starting from 07/06/2015)
+
+<b>Changelog 10/6/15</b>
+++Added Crafting book
 
 <b>Changelog 8/6/15</b>
 
