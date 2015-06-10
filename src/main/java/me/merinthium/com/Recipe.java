@@ -550,17 +550,22 @@ private static Plugin plugin;
 	    im.setLore(lore); 
 	    CraftBook.setItemMeta(im); 
 	    ShapedRecipe disk = new ShapedRecipe(CraftBook); 
-	    disk.shape("EBE","ECE","EEE").setIngredient('E', Material.EYE_OF_ENDER).setIngredient('C', Material.WORKBENCH).setIngredient('B', Material.BOOK);
+	    disk.shape("LEE","LCB","LEE").setIngredient('E', Material.EYE_OF_ENDER).setIngredient('C', Material.WORKBENCH).setIngredient('B', Material.BOOK).setIngredient('L', Material.LAPIS_BLOCK);
 	    Bukkit.getServer().addRecipe(disk);   
-	    	if (player.getItemInHand().equals(CraftBook)){
-	    			player.openWorkbench(null, true);
+	 if(player.hasPermission("Crafthium.craftbook")){
+		 if (player.getItemInHand().equals(CraftBook)){
+	    		player.openWorkbench(null, true);
+	 }else{
+		 player.sendMessage("You do not ahve permission to use that!");
 	 }
-}
+	    	
+	    
+	   }
+ }
 	 
 	public void onDisable(){
 		Bukkit.getServer().clearRecipes();
 		getLogger().info("Crafthium has been Disabled");
 		plugin = null;
 	}
-
 }
