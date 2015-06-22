@@ -6,6 +6,8 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -424,6 +426,10 @@ private static Plugin plugin;
 		FurnaceRecipe AtS = new FurnaceRecipe(new ItemStack(Material.STONE),Material.STONE,5);
 		AtS.setInput(Material.STONE,5);
 		
+		//Gun powder
+		ShapedRecipe Gnp = new ShapedRecipe(new ItemStack(Material.SULPHUR,5));
+		Gnp.shape("CQC","QCQ","CQC").setIngredient('C', Material.COAL,1).setIngredient('Q',Material.QUARTZ);
+		
 		getServer().addRecipe(saddle);
 		getServer().addRecipe(IHA);
 		getServer().addRecipe(GHA);
@@ -533,6 +539,7 @@ private static Plugin plugin;
 		getServer().addRecipe(QStBt);
 		getServer().addRecipe(RSStBb);
 		getServer().addRecipe(RSStBt);	
+		getServer().addRecipe(Gnp);
 		
 		getLogger().info("Crafthium has been Enabled");
 	}
@@ -562,6 +569,7 @@ private static Plugin plugin;
 	    
 	   }
  }
+	 
 	 
 	public void onDisable(){
 		Bukkit.getServer().clearRecipes();
