@@ -6,8 +6,6 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -556,21 +554,20 @@ private static Plugin plugin;
 	    lore.add(ChatColor.AQUA + "Right click to use");
 	    im.setLore(lore); 
 	    CraftBook.setItemMeta(im); 
-	    ShapedRecipe disk = new ShapedRecipe(CraftBook); 
-	    disk.shape("LEE","LCB","LEE").setIngredient('E', Material.EYE_OF_ENDER).setIngredient('C', Material.WORKBENCH).setIngredient('B', Material.BOOK).setIngredient('L', Material.LAPIS_BLOCK);
-	    Bukkit.getServer().addRecipe(disk);   
+	    ShapedRecipe CB = new ShapedRecipe(CraftBook); 
+	    CB.shape("LEE","LCB","LEE").setIngredient('E', Material.EYE_OF_ENDER).setIngredient('C', Material.WORKBENCH).setIngredient('B', Material.BOOK).setIngredient('L', Material.LAPIS_BLOCK);
+	    Bukkit.getServer().addRecipe(CB);   
 	 if(player.hasPermission("Crafthium.craftbook")){
 		 if (player.getItemInHand().equals(CraftBook)){
 	    		player.openWorkbench(null, true);
-	 }else{
-		 player.sendMessage("You do not ahve permission to use that!");
-	 }
-	    	
-	    
-	   }
- }
-	 
-	 
+		 }
+	}else if(player.getItemInHand().equals(CraftBook)){
+			player.sendMessage(ChatColor.RED + "You do not have permission to use that!"); 
+	 }    
+			 
+}
+
+
 	public void onDisable(){
 		Bukkit.getServer().clearRecipes();
 		getLogger().info("Crafthium has been Disabled");
