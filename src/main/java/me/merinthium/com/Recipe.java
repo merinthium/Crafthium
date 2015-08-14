@@ -18,14 +18,16 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Recipe extends JavaPlugin implements Listener {
+public class Recipe extends JavaPlugin implements Listener 
+{
 	
 @SuppressWarnings("unused")
 private static Plugin plugin;
  
 
 	@SuppressWarnings("deprecation")
-	public void onEnable(){
+	public void onEnable()
+	{
 		 getServer().getPluginManager().registerEvents(this, this); 
 			
 		 //Crafting & Smelting
@@ -51,7 +53,7 @@ private static Plugin plugin;
 		
 			//Name_tag
 		ShapedRecipe NT = new ShapedRecipe(new ItemStack(Material.NAME_TAG));
-		NT.shape("  S"," B ","P  ").setIngredient('B',Material.BOOK_AND_QUILL).setIngredient('P',Material.PAPER).setIngredient('S', Material.STRING);
+		NT.shape("PS ","SB ","  S").setIngredient('B',Material.SLIME_BALL).setIngredient('P',Material.PAPER).setIngredient('S', Material.STRING);
 		
 			//Zombie flesh - leather
 		ShapedRecipe ZFL = new ShapedRecipe(new ItemStack(Material.LEATHER));
@@ -543,7 +545,8 @@ private static Plugin plugin;
 	}
 	
  @EventHandler //Items with command actions
-	public void onPlayerRightClick(PlayerInteractEvent event) {
+	public void onPlayerRightClick(PlayerInteractEvent event) 
+ {
 	    	  Player player = event.getPlayer(); 
 	    	  
 	    ItemStack CraftBook = new ItemStack(Material.ENCHANTED_BOOK); 
@@ -557,18 +560,21 @@ private static Plugin plugin;
 	    ShapedRecipe CB = new ShapedRecipe(CraftBook); 
 	    CB.shape("LEE","LCB","LEE").setIngredient('E', Material.EYE_OF_ENDER).setIngredient('C', Material.WORKBENCH).setIngredient('B', Material.BOOK).setIngredient('L', Material.LAPIS_BLOCK);
 	    Bukkit.getServer().addRecipe(CB);   
-	 if(player.hasPermission("Crafthium.craftbook")){
-		 if (player.getItemInHand().equals(CraftBook)){
+	 if(player.hasPermission("Crafthium.craftbook"))
+	 {
+		 if (player.getItemInHand().equals(CraftBook))
+		 {
 	    		player.openWorkbench(null, true);
 		 }
-	}else if(player.getItemInHand().equals(CraftBook)){
+	 }else if(player.getItemInHand().equals(CraftBook))
+	 	{
 			player.sendMessage(ChatColor.RED + "You do not have permission to use that!"); 
-	 }    
-			 
-}
+	 	}    
+ }
 
-
-	public void onDisable(){
+ 
+	public void onDisable()
+	{
 		Bukkit.getServer().clearRecipes();
 		getLogger().info("Crafthium has been Disabled");
 		plugin = null;
