@@ -168,7 +168,7 @@ private static Plugin plugin;
 			}
 			
 			//Blue Orchid		
-			if(this.getConfig().getBoolean("Recipe.Flowers.Poppy"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Poppy"))
 			{
 				ShapelessRecipe Orchid = new ShapelessRecipe(new ItemStack(Material.RED_ROSE, 1,(short)1));
 				Orchid.addIngredient(Material.SEEDS).addIngredient(Material.INK_SACK,12);
@@ -176,7 +176,7 @@ private static Plugin plugin;
 			}
 			
 			//Allium
-			if(this.getConfig().getBoolean("Recipe.Flowers.Allium"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Allium"))
 			{
 				ShapelessRecipe Allium = new ShapelessRecipe(new ItemStack(Material.RED_ROSE, 1,(short)2));
 				Allium.addIngredient(Material.SEEDS).addIngredient(Material.INK_SACK,13);
@@ -184,7 +184,7 @@ private static Plugin plugin;
 			}
 			
 			//Azure		
-			if(this.getConfig().getBoolean("Recipe.Flowers.Azure"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Azure"))
 			{
 				ShapelessRecipe Azure = new ShapelessRecipe(new ItemStack(Material.RED_ROSE,1,(short)3));
 				Azure.addIngredient(Material.SEEDS).addIngredient(Material.INK_SACK,7);
@@ -192,7 +192,7 @@ private static Plugin plugin;
 			}
 			
 			//Red tulip		
-			if(this.getConfig().getBoolean("Recipe.Flowers.Red_Tulip"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Red_Tulip"))
 			{
 				ShapelessRecipe TulipR = new ShapelessRecipe(new ItemStack(Material.RED_ROSE,1,(short)4));
 				TulipR.addIngredient(Material.RED_ROSE, 6).addIngredient(Material.INK_SACK,1);
@@ -200,7 +200,7 @@ private static Plugin plugin;
 			}
 			
 			//Orange Tulip	
-			if(this.getConfig().getBoolean("Recipe.Flowers.Orange_Tulip"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Orange_Tulip"))
 			{
 				ShapelessRecipe TulipO = new ShapelessRecipe(new ItemStack(Material.RED_ROSE,1,(short)5));
 				TulipO.addIngredient(Material.RED_ROSE, 6).addIngredient(Material.INK_SACK,14);
@@ -208,14 +208,14 @@ private static Plugin plugin;
 			}
 			
 			//White tulip		
-			if(this.getConfig().getBoolean("Recipe.Flowers.White_Tulip"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.White_Tulip"))
 			{
 				ShapelessRecipe TulipW = new ShapelessRecipe(new ItemStack(Material.RED_ROSE,1,(short)6));
 				TulipW.addIngredient(Material.SEEDS).addIngredient(Material.INK_SACK,15);
 				getServer().addRecipe(TulipW);
 			}
 			//Pink Tulip
-			if(this.getConfig().getBoolean("Recipe.Flowers.Pink_Tulip"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Pink_Tulip"))
 			{
 				ShapelessRecipe TulipP = new ShapelessRecipe(new ItemStack(Material.RED_ROSE,1,(short)7));
 				TulipP.addIngredient(Material.RED_ROSE,6).addIngredient(Material.INK_SACK,9);
@@ -223,7 +223,7 @@ private static Plugin plugin;
 			}
 			
 			// Oxeye daisy	
-			if(this.getConfig().getBoolean("Recipe.Flowers.Oxeye_daisy"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Oxeye_daisy"))
 			{
 				ShapelessRecipe Oxeye = new ShapelessRecipe(new ItemStack(Material.RED_ROSE, 1,(short) 8));
 				Oxeye.addIngredient(Material.SEEDS).addIngredient(Material.INK_SACK,11).addIngredient(Material.INK_SACK, 15);
@@ -231,7 +231,7 @@ private static Plugin plugin;
 			}
 		
 			//SunFlower
-			if(this.getConfig().getBoolean("Recipe.Flowers.SunFlower"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.SunFlower"))
 			{
 				ShapelessRecipe SunF = new ShapelessRecipe(new ItemStack(Material.DOUBLE_PLANT));
 				SunF.addIngredient(Material.SEEDS).addIngredient(Material.INK_SACK, 11).addIngredient(Material.INK_SACK, 14);
@@ -239,7 +239,7 @@ private static Plugin plugin;
 			}
 		
 			//Lilac 	
-			if(this.getConfig().getBoolean("Recipe.Flowers.Lilac"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Lilac"))
 			{
 				ShapelessRecipe Lilac = new ShapelessRecipe(new ItemStack(Material.DOUBLE_PLANT, 1,(short)1));
 				Lilac.addIngredient(Material.SEEDS).addIngredient(Material.INK_SACK, 9).addIngredient(Material.INK_SACK, 13);
@@ -247,7 +247,7 @@ private static Plugin plugin;
 			}
 		
 			//Double Tall Grass
-			if(this.getConfig().getBoolean("Recipe.Flowers.Double_tall_grass"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Double_tall_grass"))
 			{
 				ShapelessRecipe DTG = new ShapelessRecipe(new ItemStack(Material.DOUBLE_PLANT, 1,(short)2));
 				DTG.addIngredient(Material.SEEDS).addIngredient(Material.GRASS, 1);
@@ -255,7 +255,7 @@ private static Plugin plugin;
 			}
 		
 			//Rose Bush	
-			if(this.getConfig().getBoolean("Recipe.Flowers.Rose_bush"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Rose_bush"))
 			{
 				ShapelessRecipe Rose = new ShapelessRecipe(new ItemStack(Material.DOUBLE_PLANT, 1,(short)4));
 				Rose.addIngredient(Material.DOUBLE_PLANT, 2).addIngredient(Material.RED_ROSE);
@@ -263,7 +263,7 @@ private static Plugin plugin;
 			}
 		
 			//Peony
-			if(this.getConfig().getBoolean("Recipe.Flowers.Peony"))
+			if(this.getConfig().getBoolean("Recipes.Flowers.Peony"))
 			{
 				ShapelessRecipe Peony = new ShapelessRecipe(new ItemStack(Material.DOUBLE_PLANT, 1,(short)5));
 				Peony.addIngredient(Material.DOUBLE_PLANT,2).addIngredient(Material.RED_ROSE, 7);
@@ -271,14 +271,14 @@ private static Plugin plugin;
 			}
 		}
 			//Glowstone	
-		if(this.getConfig().getBoolean("Recipe.Glow_stone"))
+		if(this.getConfig().getBoolean("Recipes.Glow_stone"))
 		{
 			ShapelessRecipe GSD = new ShapelessRecipe(new ItemStack(Material.GLOWSTONE_DUST, 4));
 			GSD.addIngredient(Material.GLOWSTONE);	
 			getServer().addRecipe(GSD);
 		}
 		//String
-		if(this.getConfig().getBoolean("Recipe.String"))
+		if(this.getConfig().getBoolean("Recipes.String"))
 		{
 			ShapelessRecipe StrgW = new ShapelessRecipe(new ItemStack(Material.STRING, 4));
 			StrgW.addIngredient(Material.WOOL);
@@ -445,7 +445,7 @@ private static Plugin plugin;
 		if(getConfig().getBoolean("Recipes.Polished_to_Normal.All"))
 		{
 			//Polished Granite
-			if(getConfig().getBoolean(""))
+			if(getConfig().getBoolean("Recipes.Polished_to_Normal.Granite"))
 			{
 				ShapelessRecipe PGtG = new ShapelessRecipe(new ItemStack(Material.STONE, 1,(short)1));
 				PGtG.addIngredient(Material.STONE,2);
@@ -468,14 +468,14 @@ private static Plugin plugin;
 		}
 				
 			//Soul sand
-		if(this.getConfig().getBoolean(""))
+		if(this.getConfig().getBoolean("Recipes.Soul_Sand"))
 		{
 			ShapedRecipe SoulS = new ShapedRecipe(new ItemStack(Material.SOUL_SAND,4));
 			SoulS.shape("SSS","SNS","SSS").setIngredient('S', Material.SAND).setIngredient('N', Material.NETHER_STALK);
 			getServer().addRecipe(SoulS);
 		}
 			//Mycel		
-		if(this.getConfig().getBoolean("Recipe.Mycelium"))
+		if(this.getConfig().getBoolean("Recipes.Mycelium"))
 		{
 			ShapelessRecipe Mycel = new ShapelessRecipe(new ItemStack(Material.MYCEL));
 			Mycel.addIngredient(Material.BROWN_MUSHROOM).addIngredient(Material.RED_MUSHROOM).addIngredient(Material.GRASS);
@@ -505,10 +505,10 @@ private static Plugin plugin;
 		
 		//Slabs to blocks			
 		
-		if(this.getConfig().getBoolean("Recipe.Slabs_To_Blocks.All"))
+		if(this.getConfig().getBoolean("Recipes.Slabs_To_Blocks.All"))
 		{
 			//Oak
-			if(this.getConfig().getBoolean("Recipe.Slabs_To_Blocks.Oak"))
+			if(this.getConfig().getBoolean("Recipes.Slabs_To_Blocks.Oak"))
 			{
 			//Oak slabs to Planks (Bottom) 
 			ShapedRecipe OStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3));
@@ -520,7 +520,7 @@ private static Plugin plugin;
 			getServer().addRecipe(OStPt);
 			}
 			//Spruce
-			if(this.getConfig().getBoolean("Recipe.Slabs_To_Blocks.Spruce"))
+			if(this.getConfig().getBoolean("Recipes.Slabs_To_Blocks.Spruce"))
 			{
 				//Spruce slabs to planks(Bottom)
 				ShapedRecipe SStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)1));
@@ -532,7 +532,7 @@ private static Plugin plugin;
 				getServer().addRecipe(SStPt);
 			}
 			//Birch
-			if(this.getConfig().getBoolean("Recipe.Slabs_To_Blocks.Birch"))
+			if(this.getConfig().getBoolean("Recipes.Slabs_To_Blocks.Birch"))
 			{
 				//Birch Slabs to Planks (bottom)
 				ShapedRecipe BStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)2));
@@ -544,7 +544,7 @@ private static Plugin plugin;
 				getServer().addRecipe(BStPt);			
 			}
 			//Jungle
-			if(this.getConfig().getBoolean("Recipe.Slabs_To_Blocks.Jungle"))
+			if(this.getConfig().getBoolean("Recipes.Slabs_To_Blocks.Jungle"))
 			{
 				//Jungle slabs to planks (Bottom)
 				ShapedRecipe JStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)3));
@@ -556,7 +556,7 @@ private static Plugin plugin;
 				getServer().addRecipe(JStPt);
 			}
 			//Acacia
-			if(this.getConfig().getBoolean("Recipe.Slabs_To_Blocks.Acacia"))
+			if(this.getConfig().getBoolean("Recipes.Slabs_To_Blocks.Acacia"))
 			{
 				//Acacia Slabs to planks (Bottom)
 				ShapedRecipe AStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)4));
@@ -569,7 +569,7 @@ private static Plugin plugin;
 	
 			}
 			//Dark_oak
-			if(this.getConfig().getBoolean("Recipe.Slabs_To_Blocks.Dark_Oak"))
+			if(this.getConfig().getBoolean("Recipes.Slabs_To_Blocks.Dark_Oak"))
 			{
 				//Dark Slabs to planks (Bottom)
 				ShapedRecipe DStPb = new ShapedRecipe(new ItemStack(Material.WOOD,3,(short)5));
@@ -583,10 +583,10 @@ private static Plugin plugin;
 	
 		}
 		//stone & brick slabs to blocks
-		if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.All"))
+		if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.All"))
 		{
 			//stone slab to block
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Stone"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Stone"))
 			{
 				//stone slab to block (Bottom)
 				ShapedRecipe SStBb = new ShapedRecipe(new ItemStack(Material.STONE,3));
@@ -598,7 +598,7 @@ private static Plugin plugin;
 				getServer().addRecipe(SStBt);
 			}
 			//SandStone Slab to block 	
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Sand_Stone"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Sand_Stone"))
 			{
 				//SandStone Slab to block (Bottom)	
 				ShapedRecipe SSStBb = new ShapedRecipe(new ItemStack(Material.SANDSTONE,3));
@@ -611,7 +611,7 @@ private static Plugin plugin;
 			}
 			
 			//Cobble Slab to block
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Cobble_stone"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Cobble_Stone"))
 			{
 				//Cobble slab to block (Bottom)
 				ShapedRecipe CStBb = new ShapedRecipe(new ItemStack(Material.COBBLESTONE,3));
@@ -623,7 +623,7 @@ private static Plugin plugin;
 				getServer().addRecipe(CStBt);
 			}
 			//brick slab to block
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Brick"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Brick"))
 			{
 				//Brick slab to block (Bottom)
 				ShapedRecipe BStBb = new ShapedRecipe(new ItemStack(Material.BRICK,3));
@@ -635,7 +635,7 @@ private static Plugin plugin;
 				getServer().addRecipe(BStBt);
 			}
 			//Stone brick slab to block
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Stone_Brick"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Stone_Brick"))
 			{
 				//Stone brick slab to block (Bottom)
 				ShapedRecipe SBStBb = new ShapedRecipe(new ItemStack(Material.SMOOTH_BRICK,3));
@@ -647,7 +647,7 @@ private static Plugin plugin;
 				getServer().addRecipe(SBStBt);
 			}
 			//nether brick slab to block
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Nether_Brick"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Nether_Brick"))
 			{
 				//Nether Slab to block (Bottom)
 				ShapedRecipe NStBb = new ShapedRecipe(new ItemStack(Material.NETHER_BRICK,3));
@@ -659,7 +659,7 @@ private static Plugin plugin;
 				getServer().addRecipe(NStBt);
 			}
 			//quartz slab to block
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Quartz"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Quartz"))
 			{
 				//Quartz to block (Bottom)
 				ShapedRecipe QStBb = new ShapedRecipe(new ItemStack(Material.QUARTZ_BLOCK,3));
@@ -671,7 +671,7 @@ private static Plugin plugin;
 				getServer().addRecipe(QStBt);
 			}
 			//Red sandstone brick
-			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_blocks.Red_SandStone"))
+			if(getConfig().getBoolean("Recipes.Stone&Brick_Slabs_To_Blocks.Red_SandStone"))
 			{
 				//Red Sandstone to block (Bottom)
 				ShapedRecipe RSStBb = new ShapedRecipe(new ItemStack(Material.RED_SANDSTONE,3));
@@ -726,7 +726,7 @@ private static Plugin plugin;
 	
 		//Furnace Recipes 
 		//Bucket to iron
-		if(getConfig().getBoolean("Recipes.Furnace_Recipes.Iron_from_bucket"))
+		if(getConfig().getBoolean("Furnace_Recipes.Iron_from_bucket"))
 		{
 			FurnaceRecipe Bucket = new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 3),Material.BUCKET);
 			Bucket.setInput(Material.BUCKET);
@@ -734,7 +734,7 @@ private static Plugin plugin;
 		}
 		
 			//Flint
-		if(getConfig().getBoolean("Recipes.Furnace_Recipes.Flint"))
+		if(getConfig().getBoolean("Furnace_Recipes.Flint"))
 		{
 		FurnaceRecipe FL = new FurnaceRecipe(new ItemStack(Material.FLINT), Material.GRAVEL);
 		FL.setInput(Material.GRAVEL);
@@ -742,7 +742,7 @@ private static Plugin plugin;
 		}
 		
 			//Andersite to stone
-		if(getConfig().getBoolean("Recipes.Furnace_Recipes.Andersite_To_Stone"))
+		if(getConfig().getBoolean("Furnace_Recipes.Andersite_To_Stone"))
 		{
 		FurnaceRecipe AtS = new FurnaceRecipe(new ItemStack(Material.STONE),Material.STONE,5);
 		AtS.setInput(Material.STONE,5);
@@ -760,7 +760,9 @@ private static Plugin plugin;
 	public void onPlayerRightClick(PlayerInteractEvent event) 
  {
 	    	  Player player = event.getPlayer(); 
-	    	  
+	    if(getConfig().getBoolean("Craft_Book"))
+	    {
+	    	
 	    ItemStack CraftBook = new ItemStack(Material.ENCHANTED_BOOK); 
 	    ItemMeta im = CraftBook.getItemMeta(); 
 	    im.setDisplayName (ChatColor.RED + "" + ChatColor.BOLD + "Crafting Book"); 
@@ -772,16 +774,12 @@ private static Plugin plugin;
 	    ShapedRecipe CB = new ShapedRecipe(CraftBook); 
 	    CB.shape("LEE","LCB","LEE").setIngredient('E', Material.EYE_OF_ENDER).setIngredient('C', Material.WORKBENCH).setIngredient('B', Material.BOOK).setIngredient('L', Material.LAPIS_BLOCK);
 	    Bukkit.getServer().addRecipe(CB);  
-	 if(player.hasPermission("Crafthium.craftbook"))
-	 {
+	
 		 if (player.getItemInHand().equals(CraftBook))
 		 {
 	    		player.openWorkbench(null, true);
-		 }
-	 }else if(player.getItemInHand().equals(CraftBook))
-	 	{
-			player.sendMessage(ChatColor.RED + "You do not have permission to use that!"); 
-	 	}    
+		 } 
+	    }
  }
 
 	public void onDisable()
@@ -796,9 +794,10 @@ private static Plugin plugin;
 		 if(!new File(this.getDataFolder(), "config.yml").exists())
 		 {
 			 this.saveDefaultConfig();
+			 getConfig().options().copyHeader(true);
 		 }else
 		 {
-		 getConfig().options().copyDefaults(true);
+	     getConfig().options().copyDefaults(true);
 		 getConfig().options().copyHeader(true);
 		 saveConfig();
 		 }
