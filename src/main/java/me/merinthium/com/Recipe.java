@@ -7,9 +7,11 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
@@ -18,6 +20,7 @@ import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+
 public class Recipe extends JavaPlugin implements Listener 
 {	
 @SuppressWarnings("unused")
@@ -781,6 +784,86 @@ private static Plugin plugin;
 		 } 
 	    }
  }
+
+
+@EventHandler
+@SuppressWarnings("deprecation")
+public void craftItem(PrepareItemCraftEvent e) 
+{
+	Material itemType = e.getRecipe().getResult().getType();
+	@SuppressWarnings("unused")
+	Byte itemData = e.getRecipe().getResult().getData().getData();
+	if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.All") == true)
+	{
+		if(itemType==Material.ENDER_CHEST||itemType==Material.HOPPER||itemType==Material.EYE_OF_ENDER||itemType==Material.TNT) 
+		{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    				((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+	if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Ender_chest") == true)
+	{
+		if(itemType==Material.ENDER_CHEST) 
+		{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    				((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Hopper") == true)
+    {
+    	if(itemType==Material.HOPPER)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Eye_Of_Ender") == true)
+    {
+    	if(itemType==Material.EYE_OF_ENDER)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.TNT") == true)
+    {
+    	if(itemType==Material.TNT)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }	
+}
 
 	public void onDisable()
 	{
