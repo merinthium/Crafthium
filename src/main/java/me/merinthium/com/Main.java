@@ -21,7 +21,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Recipe extends JavaPlugin implements Listener 
+public class Main extends JavaPlugin implements Listener 
 {	
 @SuppressWarnings("unused")
 private static Plugin plugin;
@@ -31,6 +31,7 @@ private static Plugin plugin;
 	{
 		 getServer().getPluginManager().registerEvents(this, this); 
 		 registerConfig();
+		 
 			//Crafting & Smelting
 			//saddle
 		if(this.getConfig().getBoolean("Recipes.Saddle"))
@@ -751,8 +752,6 @@ private static Plugin plugin;
 		AtS.setInput(Material.STONE,5);
 		getServer().addRecipe(AtS);
 		}
-	
-		
 		getLogger().info("Crafthium has been Enabled");
 		
 		
@@ -862,7 +861,105 @@ public void craftItem(PrepareItemCraftEvent e)
     			}
     		}
     	}
-    }	
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Torch") == true)
+    {
+    	if(itemType==Material.TORCH)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }	 
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Beacon") == true)
+    {
+    	if(itemType==Material.BEACON)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }	 
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Potion") == true)
+    {
+    	if(itemType==Material.POTION)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Bucket") == true)
+    {
+    	if(itemType==Material.BUCKET)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Anvil") == true)
+    {
+    	if(itemType==Material.ANVIL)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Armor_stand") == true)
+    {
+    	if(itemType==Material.ARMOR_STAND)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
+    if(getConfig().getBoolean("Disable_Vanilla_Crafting_Recipe.Bed") == true)
+    {
+    	if(itemType==Material.BED)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.AIR));
+    		for(HumanEntity he:e.getViewers()) 
+    		{
+    			if(he instanceof Player) 
+    			{
+    					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
+    			}
+    		}
+    	}
+    }
 }
 
 	public void onDisable()
