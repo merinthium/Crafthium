@@ -34,6 +34,9 @@ private static Plugin plugin;
 		 
 			//Crafting & Smelting
 			//saddle
+	 if(this.getConfig().getBoolean("Recipes.Disable_Custom_Recipies")== false)
+	 {
+			 
 		if(this.getConfig().getBoolean("Recipes.Saddle"))
 		{
 			ShapedRecipe saddle = new ShapedRecipe(new ItemStack(Material.SADDLE));
@@ -752,6 +755,8 @@ private static Plugin plugin;
 		AtS.setInput(Material.STONE,5);
 		getServer().addRecipe(AtS);
 		}
+	 }
+		
 		getLogger().info("Crafthium has been Enabled");
 		
 	}
@@ -1363,6 +1368,14 @@ public void craftItem(PrepareItemCraftEvent e)
     					((Player)he).sendMessage(ChatColor.RED+"You cannot craft this!");
     			}
     		}
+    	}
+    }
+    if(getConfig().getBoolean("Alternate_Recipe.Torch") == true)
+    {
+    	if(itemType==Material.TORCH)
+    	{
+    		e.getInventory().setResult(new ItemStack(Material.TORCH, 1));
+    		
     	}
     }
     
